@@ -49,6 +49,7 @@ Chapter14 - ML APIs(Pre Built APIs)
 4) Translation API
 5) Video API
 
+
 Chapter15 - Google Vision API
 1) Try in browser
 https://cloud.google.com/vision/docs/drag-and-drop?hl=ko
@@ -67,4 +68,56 @@ gcloud ml vision detect-faces gs://batch_data_embedding/demo-img.jpg
 
 5) python code(for label detection)
 
+* Let try more of Vision API! (in class)
+1) Text from Image
+gcloud ml vision detect-text demo-img.jpg
+gcloud ml vision detect-text hand_written_text1.jpeg
+gcloud ml vision detect-text hand_written_text1.jpeg | grep description
+gcloud ml vision detect-text make-the-day-great.jpg
+gcloud ml vision detect-text make-the-day-great.jpg | grep description
+
+2) Text from PDF
+gcloud ml vision detect-text-pdf gs://batch_data_embedding/detect_text/sample-local.pdf gs://batch_data_embedding/detect_text/sample-local-output.pdf
+gcloud ml vision detect-text-pdf gs://batch_data_embedding/detect_text/세금계산서_2504_다스인포텍.pdf gs://batch_data_embedding/detect_text/세금계산서_2504_다스인포텍.pdf
+
+
+3) Landmark, Logo, Label detection
+gcloud ml vision detect-landmarks landmark.jpg
+gcloud ml vision detect-landmarks landmark.webp
+gcloud ml vision detect-landmarks tajimahal.jpg
+gcloud ml vision detect-logos starburks.jpg
+gcloud ml vision detect-logos instagram.webp
+
+* 안됨 : logo와 landmark를 확실히 분류해야함
+gcloud ml vision detect-logos landmark.jpg
+
+* Label은 해당 이미지에 달린 label을 조회함(*score 확인 - 해당 label과 얼마나 일치하는지)
+gcloud ml vision detect-labels landmark.webp
+gcloud ml vision detect-labels instagram.webp
+gcloud ml vision detect-image-properties honda.webp
+gcloud ml vision detect-objects multiple_fruits2.jpg 
+
+
+Chapter16 - Google Natural Language API
+1) Try in browser
+2) *gcloud tool
+3) API Explorer - Raw Rest API
+4) python code
+
+gcloud ml language
+gcloud ml language analyze-entities --content='Born in Scranton, Pennsylvania, Biden graduated from the University of Delaware in 1965 and the Syracuse University College of Law in 1968. He was elected to the New Castle County Council in 1970 and the U.S. Senate in 1972. As a senator, Biden chaired the Senate Judiciary Committee and Foreign Relations Committee. He drafted and led passage of the Violent Crime Control and Law Enforcement Act and the Violence Against Women Act. He also oversaw six U.S. Supreme Court confirmation hearings, including contentious hearings for Robert Bork and Clarence Thomas. He opposed the Gulf War in 1991 but voted in favor of the Iraq War Resolution in 2002. Biden ran unsuccessfully for the 1988 and 2008 Democratic presidential nominations. In 2008, Obama chose Biden as his running mate, and he was a close counselor to Obama as vice president. In the 2020 presidential election, Biden selected Kamala Harris as his running mate, and they defeated Republican incumbents Donald Trump and Mike Pence. He became the first president to serve with a female or African American vice president.' > a.out
+gcloud ml language analyze-sentiment --content='Born in Scranton, Pennsylvania, Biden graduated from the University of Delaware in 1965 and the Syracuse University College of Law in 1968.' > b.out
+gcloud ml language analyze-sentiment --content='You did it, you finally did it! I knew it. That is beautiful.'
+gcloud ml language analyze-sentiment --content='How dare you.'
+gcloud ml language analyze-sentiment --content='Are you cheating on me? I am going to kill you.'
+
+gcloud ml language analyze-entity-sentiment --content='You have done it. Great job man.'
+
+(구문 분석 - 문법에 대한 내용)
+gcloud ml language analyze-syntax 
+gcloud ml language analyze-syntax --content='Are you cheating on me? I am going to kill you.' > c.out
+
+gcloud ml language classify-text 
+gcloud ml language classify-text --content='Born in Scranton, Pennsylvania, Biden graduated from the University of Delaware in 1965 and the Syracuse University College of Law in 1968.'
+gcloud ml language classify-text --content='Drone incidents near nuclear power plants are a nuclear safety hazard, and need to stop, Director General of the International Atomic Energy Agency (IAEA) Rafael Grossi said.'
 

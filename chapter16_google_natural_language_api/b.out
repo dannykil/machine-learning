@@ -1,0 +1,19 @@
+{
+  "documentSentiment": {
+    "magnitude": 0.0,
+    "score": 0.0
+  },
+  "language": "en",
+  "sentences": [
+    {
+      "sentiment": {
+        "magnitude": 0.0,
+        "score": 0.0
+      },
+      "text": {
+        "beginOffset": 0,
+        "content": "Born in Scranton, Pennsylvania, Biden graduated from the University of Delaware in 1965 and the Syracuse University College of Law in 1968."
+      }
+    }
+  ]
+}

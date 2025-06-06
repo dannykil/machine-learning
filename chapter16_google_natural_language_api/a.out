@@ -1,0 +1,998 @@
+{
+  "entities": [
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 32,
+            "content": "Biden"
+          },
+          "type": "PROPER"
+        },
+        {
+          "text": {
+            "beginOffset": 239,
+            "content": "Biden"
+          },
+          "type": "PROPER"
+        },
+        {
+          "text": {
+            "beginOffset": 650,
+            "content": "Biden"
+          },
+          "type": "PROPER"
+        },
+        {
+          "text": {
+            "beginOffset": 755,
+            "content": "Biden"
+          },
+          "type": "PROPER"
+        },
+        {
+          "text": {
+            "beginOffset": 801,
+            "content": "counselor"
+          },
+          "type": "COMMON"
+        },
+        {
+          "text": {
+            "beginOffset": 874,
+            "content": "Biden"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/012gx2",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Joe_Biden"
+      },
+      "name": "Biden",
+      "salience": 0.7995796,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 57,
+            "content": "University of Delaware"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/01swxv",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/University_of_Delaware"
+      },
+      "name": "University of Delaware",
+      "salience": 0.025340624,
+      "type": "ORGANIZATION"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 8,
+            "content": "Scranton"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/0_24q",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Scranton,_Pennsylvania"
+      },
+      "name": "Scranton",
+      "salience": 0.02231426,
+      "type": "LOCATION"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 18,
+            "content": "Pennsylvania"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/05tbn",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Pennsylvania"
+      },
+      "name": "Pennsylvania",
+      "salience": 0.02231426,
+      "type": "LOCATION"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 96,
+            "content": "Syracuse University College of Law"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/08vy8j",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Syracuse_University_College_of_Law"
+      },
+      "name": "Syracuse University College of Law",
+      "salience": 0.02231426,
+      "type": "ORGANIZATION"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 768,
+            "content": "running mate"
+          },
+          "type": "COMMON"
+        },
+        {
+          "text": {
+            "beginOffset": 910,
+            "content": "running mate"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "running mate",
+      "salience": 0.01700916,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 230,
+            "content": "senator"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "senator",
+      "salience": 0.00860427,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 472,
+            "content": "confirmation hearings"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "confirmation hearings",
+      "salience": 0.0053378064,
+      "type": "EVENT"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 162,
+            "content": "New Castle County Council"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/04hzwr2"
+      },
+      "name": "New Castle County Council",
+      "salience": 0.0051235585,
+      "type": "ORGANIZATION"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 204,
+            "content": "U.S. Senate"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/07t58",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/United_States_Senate"
+      },
+      "name": "U.S. Senate",
+      "salience": 0.0051235585,
+      "type": "ORGANIZATION"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 336,
+            "content": "passage"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "passage",
+      "salience": 0.004645916,
+      "type": "OTHER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 608,
+            "content": "favor"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "favor",
+      "salience": 0.004294739,
+      "type": "OTHER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 823,
+            "content": "vice president"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "vice president",
+      "salience": 0.0040259426,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 743,
+            "content": "Obama"
+          },
+          "type": "PROPER"
+        },
+        {
+          "text": {
+            "beginOffset": 814,
+            "content": "Obama"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/02mjmr",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Barack_Obama"
+      },
+      "name": "Obama",
+      "salience": 0.0037712385,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 517,
+            "content": "hearings"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "hearings",
+      "salience": 0.003560364,
+      "type": "EVENT"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 864,
+            "content": "election"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "election",
+      "salience": 0.0032220313,
+      "type": "EVENT"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 405,
+            "content": "Violence Against Women Act"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/079xdr",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Violence_Against_Women_Act"
+      },
+      "name": "Violence Against Women Act",
+      "salience": 0.003167725,
+      "type": "WORK_OF_ART"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 257,
+            "content": "Senate Judiciary Committee"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/036wwt",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/United_States_Senate_Committee_on_the_Judiciary"
+      },
+      "name": "Senate Judiciary Committee",
+      "salience": 0.0031401268,
+      "type": "ORGANIZATION"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 288,
+            "content": "Foreign Relations Committee"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/02cv6c",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/United_States_Senate_Committee_on_Foreign_Relations"
+      },
+      "name": "Foreign Relations Committee",
+      "salience": 0.0031401268,
+      "type": "ORGANIZATION"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 351,
+            "content": "Violent Crime Control and Law Enforcement Act"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/01fdbp",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Violent_Crime_Control_and_Law_Enforcement_Act"
+      },
+      "name": "Violent Crime Control and Law Enforcement Act",
+      "salience": 0.003129049,
+      "type": "WORK_OF_ART"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 578,
+            "content": "Gulf War"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/018w0j",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Gulf_War"
+      },
+      "name": "Gulf War",
+      "salience": 0.0028922409,
+      "type": "EVENT"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 1066,
+            "content": "vice president"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "vice president",
+      "salience": 0.0028118428,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 1013,
+            "content": "president"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "president",
+      "salience": 0.0028118428,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 453,
+            "content": "U.S. Supreme Court"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/07sz1",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Supreme_Court_of_the_United_States"
+      },
+      "name": "U.S. Supreme Court",
+      "salience": 0.0027752675,
+      "type": "ORGANIZATION"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 546,
+            "content": "Clarence Thomas"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/01_4j",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Clarence_Thomas"
+      },
+      "name": "Clarence Thomas",
+      "salience": 0.0027752675,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 530,
+            "content": "Robert Bork"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/0vgtl",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Robert_Bork"
+      },
+      "name": "Robert Bork",
+      "salience": 0.0027752675,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 621,
+            "content": "Iraq War Resolution"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {},
+      "name": "Iraq War Resolution",
+      "salience": 0.002540798,
+      "type": "OTHER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 953,
+            "content": "incumbents"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "incumbents",
+      "salience": 0.002256073,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 964,
+            "content": "Donald Trump"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/0cqt90",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Donald_Trump"
+      },
+      "name": "Donald Trump",
+      "salience": 0.0015459257,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 721,
+            "content": "nominations"
+          },
+          "type": "COMMON"
+        }
+      ],
+      "metadata": {},
+      "name": "nominations",
+      "salience": 0.0014181606,
+      "type": "OTHER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 889,
+            "content": "Kamala Harris"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/08sry2",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Kamala_Harris"
+      },
+      "name": "Kamala Harris",
+      "salience": 0.0014010246,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 942,
+            "content": "Republican"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/07wbk",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Republican_Party_(United_States)"
+      },
+      "name": "Republican",
+      "salience": 0.0013337437,
+      "type": "ORGANIZATION"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 981,
+            "content": "Mike Pence"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/022r9r",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Mike_Pence"
+      },
+      "name": "Mike Pence",
+      "salience": 0.0013337437,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 1049,
+            "content": "African American"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {},
+      "name": "African American",
+      "salience": 0.0013320158,
+      "type": "PERSON"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 697,
+            "content": "Democratic"
+          },
+          "type": "PROPER"
+        }
+      ],
+      "metadata": {
+        "mid": "/m/0d075m",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Democratic_Party_(United_States)"
+      },
+      "name": "Democratic",
+      "salience": 0.0008381381,
+      "type": "ORGANIZATION"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 692,
+            "content": "2008"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "year": "2008"
+      },
+      "name": "2008",
+      "salience": 0.0,
+      "type": "DATE"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 134,
+            "content": "1968"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "year": "1968"
+      },
+      "name": "1968",
+      "salience": 0.0,
+      "type": "DATE"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 191,
+            "content": "1970"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "year": "1970"
+      },
+      "name": "1970",
+      "salience": 0.0,
+      "type": "DATE"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 219,
+            "content": "1972"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "year": "1972"
+      },
+      "name": "1972",
+      "salience": 0.0,
+      "type": "DATE"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 590,
+            "content": "1991"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "year": "1991"
+      },
+      "name": "1991",
+      "salience": 0.0,
+      "type": "DATE"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 644,
+            "content": "2002"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "year": "2002"
+      },
+      "name": "2002",
+      "salience": 0.0,
+      "type": "DATE"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 683,
+            "content": "1988"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "year": "1988"
+      },
+      "name": "1988",
+      "salience": 0.0,
+      "type": "DATE"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 83,
+            "content": "1965"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "year": "1965"
+      },
+      "name": "1965",
+      "salience": 0.0,
+      "type": "DATE"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 737,
+            "content": "2008"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "year": "2008"
+      },
+      "name": "2008",
+      "salience": 0.0,
+      "type": "DATE"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 846,
+            "content": "2020"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "year": "2020"
+      },
+      "name": "2020",
+      "salience": 0.0,
+      "type": "DATE"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 590,
+            "content": "1991"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "value": "1991"
+      },
+      "name": "1991",
+      "salience": 0.0,
+      "type": "NUMBER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 134,
+            "content": "1968"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "value": "1968"
+      },
+      "name": "1968",
+      "salience": 0.0,
+      "type": "NUMBER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 83,
+            "content": "1965"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "value": "1965"
+      },
+      "name": "1965",
+      "salience": 0.0,
+      "type": "NUMBER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 191,
+            "content": "1970"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "value": "1970"
+      },
+      "name": "1970",
+      "salience": 0.0,
+      "type": "NUMBER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 644,
+            "content": "2002"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "value": "2002"
+      },
+      "name": "2002",
+      "salience": 0.0,
+      "type": "NUMBER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 683,
+            "content": "1988"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "value": "1988"
+      },
+      "name": "1988",
+      "salience": 0.0,
+      "type": "NUMBER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 219,
+            "content": "1972"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "value": "1972"
+      },
+      "name": "1972",
+      "salience": 0.0,
+      "type": "NUMBER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 737,
+            "content": "2008"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "value": "2008"
+      },
+      "name": "2008",
+      "salience": 0.0,
+      "type": "NUMBER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 449,
+            "content": "six"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "value": "6"
+      },
+      "name": "six",
+      "salience": 0.0,
+      "type": "NUMBER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 846,
+            "content": "2020"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "value": "2020"
+      },
+      "name": "2020",
+      "salience": 0.0,
+      "type": "NUMBER"
+    },
+    {
+      "mentions": [
+        {
+          "text": {
+            "beginOffset": 692,
+            "content": "2008"
+          },
+          "type": "TYPE_UNKNOWN"
+        }
+      ],
+      "metadata": {
+        "value": "2008"
+      },
+      "name": "2008",
+      "salience": 0.0,
+      "type": "NUMBER"
+    }
+  ],
+  "language": "en"
+}
