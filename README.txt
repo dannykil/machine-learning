@@ -120,4 +120,10 @@ gcloud ml language analyze-syntax --content='Are you cheating on me? I am going 
 gcloud ml language classify-text 
 gcloud ml language classify-text --content='Born in Scranton, Pennsylvania, Biden graduated from the University of Delaware in 1965 and the Syracuse University College of Law in 1968.'
 gcloud ml language classify-text --content='Drone incidents near nuclear power plants are a nuclear safety hazard, and need to stop, Director General of the International Atomic Energy Agency (IAEA) Rafael Grossi said.'
+gcloud ml language classify-text --content='대한민국 제21대 대통령 선거는 대한민국의 제21대 대통령을 선출하는 대한민국의 대통령 선거이다. 선거 결과 더불어민주당의 이재명 후보가 국민의힘 김문수 후보와 개혁신당 이준석 후보를 누르고 대통령에 당선되었다' --language=ko 
+
+
+Chapter17 - Google Speech To Text, Text To Speech API
+1) Try in browser
+
 
