@@ -127,3 +127,14 @@ Chapter17 - Google Speech To Text, Text To Speech API
 1) Try in browser
 
 
+Chapter18 - Note Google AutoML
+
+
+Chapter19 - AutoML Vision(콘솔 쉘에서 진행)
+https://www.kaggle.com/datasets/hasibalmuzdadid/shoe-vs-sandal-vs-boot-dataset-15k-images
+gsutil ls 
+gsutil ls gs://automl_images_dataset/datasets
+gsutil ls gs://automl_images_dataset/datasets/boot
+gsutil ls gs://automl_images_dataset/datasets/shoe
+gsutil ls gs://automl_images_dataset/datasets/sandal
+
