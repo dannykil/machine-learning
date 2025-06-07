@@ -138,3 +138,9 @@ gsutil ls gs://automl_images_dataset/datasets/boot
 gsutil ls gs://automl_images_dataset/datasets/shoe
 gsutil ls gs://automl_images_dataset/datasets/sandal
 
+* 대용량 푸시 (Large Push - 500MB 허용 및 초기화)
+git config --global http.postBuffer 524288000
+git config --global --unset http.postBuffer
+
+
+Chapter20 - AutoML Natural Language
