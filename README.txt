@@ -144,3 +144,27 @@ git config --global --unset http.postBuffer
 
 
 Chapter20 - AutoML Natural Language
+
+
+Chapter21 - AutoML with Tabular data
+
+
+Chapter22 - Custom Training
+You have your own dataset.
+You want to train your own model.
+You have a team of data scientists and they want to write their own algorithm based on
+- Scikit Learn, XGBoost
+- Tensorflow
+- Pytorch Framework
+
+* How to do?
+- Spin notebook instance with Vertex AI workbench
+- Two ways of Custom Trainig can be done : pre-built/custom container
+
+Dataset for Custom Training 
+- Iris Flower dataset
+- 4 features : sepal length, sepal width, petal length, petal width
+- prediction : 3 types of flowers(setosa, virginica, verci-color)
+- 150 samples
+- https://www.kaggle.com/datasets/arshid/iris-flower-dataset
+- Training : custom container, pre-built container
