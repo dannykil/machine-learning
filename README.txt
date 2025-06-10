@@ -168,3 +168,40 @@ Dataset for Custom Training
 - 150 samples
 - https://www.kaggle.com/datasets/arshid/iris-flower-dataset
 - Training : custom container, pre-built container
+
+
+Chapter23 - Custom Training with Custom container
+- Process of Building Custom container
+1) Prepare Dataset - Explore
+2) Setup Cloud Storage Bucket
+3) Create Notebook instance
+4) Upload Data to Bucket
+
+5) Training Code in Scikit Learn/Tensorflow (or any other framework)
+- 강의에서 모델을 export(model.pkl)해서 GCS에 저장했지만 도커 컨테이너를 사용할거라 삭제
+
+6) Make Docker Container from code
+- training.ipynb > training.py로 변환(terminal에서 가능 - notebook 생성 시 옵션에 지정함)
+> jupyter nbconvert training.ipynb --to python
+- Dockerfile, requirements.txt 파일 생성
+
+7) Push Docker Image to Artifact Registry(Copy Path)
+7.1) Artifact Registry 생성
+7.2) 환경변수 내 이미지 경로 저장
+- us-central1-docker.pkg.dev/khlee-demo/custom-training-af
+- us-central1-docker.pkg.dev/khlee-demo/custom-training-af/${IMAGE_NAME}:${IMAGE_TAG}
+- us-central1-docker.pkg.dev/khlee-demo/custom-training-af/iris_custom:v1
+export IMAGE_URI=us-central1-docker.pkg.dev/khlee-demo/custom-training-af/iris_custom:v1 <<< terminal에 입력
+7.3) 도커 이미지 생성
+docker build -f Dockerfile -t ${IMAGE_URI} ./
+7.4) Artifact Registry 업로드
+- docker configuration update
+gcloud auth configure-docker \
+    us-central1-docker.pkg.dev
+- docker push
+docker push ${IMAGE_URI}
+
+8) Setup Custom Training with Custom Container <<< 이 부분은 정확히 뭘한다는건지 아직 잘 모르겠음
+9) Import Model from Bucket to Model Registry <<< 이 부분이 이해가 잘 안됨. 이미지를 Artifact Registry에 업로드 했는데 왜 버킷에서 가져오지?
+10) Deploy to Endpoint
+11) Test
