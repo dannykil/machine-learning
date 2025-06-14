@@ -204,4 +204,36 @@ docker push ${IMAGE_URI}
 8) Setup Custom Training with Custom Container <<< 이 부분은 정확히 뭘한다는건지 아직 잘 모르겠음
 9) Import Model from Bucket to Model Registry <<< 이 부분이 이해가 잘 안됨. 이미지를 Artifact Registry에 업로드 했는데 왜 버킷에서 가져오지?
 10) Deploy to Endpoint
+- Test your model
+{
+"instances": [
+[5.0, 3.6, 1.4, 0.2], 
+[10.0, 3.6, 1.4, 0.2], 
+[10.0, 3.6, 1.4, 10.2]
+]
+}
+
+- Sample Request
+* Notebook에서 진행하며 INPUT-JSON 파일 생성하여 위 json 데이터 저장
+ENDPOINT_ID="895421378939846656"
+PROJECT_ID="842505830814"
+INPUT_DATA_FILE="INPUT-JSON"
+
+curl \
+-X POST \
+-H "Authorization: Bearer $(gcloud auth print-access-token)" \
+-H "Content-Type: application/json" \
+"https://us-central1-aiplatform.googleapis.com/v1/projects/${PROJECT_ID}/locations/us-central1/endpoints/${ENDPOINT_ID}:predict" \
+-d "@${INPUT_DATA_FILE}"
+
 11) Test
+
+12) Prediction
+12.1) Online Prediction(지금까지 한 것들)
+- 결과를 즉각적으로 확인해야하는 경우
+- 모델이 배포되어야함
+12.2) Batch Prediction
+- 비동기로 진행
+- 즉각적인 예측이 필요없는 경우(왜?)
+- 모델을 배포할 필요 없음
+- 한 번에 예측할 양이 많은 경우
