@@ -170,8 +170,22 @@ Dataset for Custom Training
 - Training : custom container, pre-built container
 
 
-Chapter23 - Custom Training with Custom container
+Chapter23 - Custom Training with Custom Container
 - Process of Building Custom container
+1) Prepare Dataset - Explore
+2) Setup Cloud Storage Bucket
+3) Create Notebook instance
+4) Upload Data to Bucket
+5) Training Code in Scikit Learn/Tensorflow (or any other framework)
+6) Make Docker Container from code
+7) Push Docker Image to Artifact Registry(Copy Path)
+8) Setup Custom Training with Custom Container <<< 이 부분은 정확히 뭘한다는건지 아직 잘 모르겠음
+9) Import Model from Bucket to Model Registry <<< 이 부분이 이해가 잘 안됨. 이미지를 Artifact Registry에 업로드 했는데 왜 버킷에서 가져오지?
+10) Deploy to Endpoint
+11) Test
+12) Prediction
+
+
 1) Prepare Dataset - Explore
 2) Setup Cloud Storage Bucket
 3) Create Notebook instance
@@ -229,7 +243,7 @@ curl \
 11) Test
 
 12) Prediction
-12.1) Online Prediction(지금까지 한 것들)
+12.1) Online Prediction(지금까지 한 것들 - endpoint가 Online Prediction에 생성되어 있음)
 - 결과를 즉각적으로 확인해야하는 경우
 - 모델이 배포되어야함
 12.2) Batch Prediction
@@ -237,3 +251,35 @@ curl \
 - 즉각적인 예측이 필요없는 경우(왜?)
 - 모델을 배포할 필요 없음
 - 한 번에 예측할 양이 많은 경우
+
+
+Chapter24 - Custom Training with PreBuilt Container
+1) Dataset - Explore
+2) Setup Cloud Storage Bucket
+3) Create Notebook Instance 
+4) Upload Data to Bucket
+
+5) Training Code in sklearn(x)/tensorflow(o) (or any other framework)
+jupyter nbconvert train.ipynb --to python
+
+6) need 3 files - train.py, setup.py, __init__.py
+python setup.py sdist --formats=gztar
+
+7) Setup Custom Training with PreBuilt Container 
+8) Import Model from Bucket to Model Registry
+9) Deploy to Endpoint(15~20분 걸림)
+10) Prediction
+
++ input과 output path를 인자로 받을 수 있도록 변경(train.py)
+- setup.py 파일 내 버전 변경
+python setup.py sdist --formats=gztar
+gsutil cp dist/trainer-0.2.tar.gz gs://training_prebuilt_container/
+
+--input_data=gs://training_prebuilt_container/IRIS.csv
+--mod_out=gs://training_prebuilt_container/model_output_with_args
+
+
+* [중요] prebuilt, custom container은 언제 사용하는가?
+>>> 실행환경을 직접 구성해야하는 경우 = custom container
+prebuilt container는 머신러닝을 위해 필요한 기본적인 패키지(ex. pytorch or tensorflow 등)가 설치된 환경을 제공한다면 
+custom container는 직접 컨테이너 환경에 필요한 머신러닝 및 회사에서 자체 개발한 패키지를 설치하여 환경을 구성할 수 있음.
