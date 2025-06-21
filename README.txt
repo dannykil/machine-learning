@@ -313,4 +313,24 @@ ImageDatasetCreateOp
 1) Components 및 Pipeline(함수) 구성
 2) Complie 
 
+* 이슈 해결
+# 해결방법1 - 가상환경 이용
+# 1) 가상환경 생성
+# python3 -m venv venv
+# source venv/bin/activate
+# python -m pip install --upgrade pip setuptools wheel
+# pip install google-cloud-pipeline-components
+
+# 2) ipykernel 설치
+# python -m pip install ipykernel
+
+# 3) 가상 환경을 주피터 커널로 등록
+# python -m ipykernel install --user --name=pipeline-venv --display-name="Python 3 (Pipeline Venv)"
+
+# 4) 주피터 노트북 재시작 및 커널 변경(혹은 해당 .ipynb 파일의 가상 환경 선택)
+
+# 해결방법2 - 라이브러리 버전 확인
+# 가상환경 폴더에서 라이브러리 버전 확인한 결과 pip install 시 v1 버전이 설치되어 no module 이슈가 발생했던 것
+# /home/jupyter/pipeline2/venv/lib/python3.10/site-packages/google_cloud_pipeline_components <<< 여기
+
 *** 마지막에 Image Classfication Model 학습에 12만원 비용 발생(주의할 것)
