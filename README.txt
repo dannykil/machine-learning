@@ -312,3 +312,5 @@ Chapter25 - Vertex AI Pipeline + Batch Prediction
 ImageDatasetCreateOp
 1) Components 및 Pipeline(함수) 구성
 2) Complie 
+
+*** 마지막에 Image Classfication Model 학습에 12만원 비용 발생(주의할 것)
