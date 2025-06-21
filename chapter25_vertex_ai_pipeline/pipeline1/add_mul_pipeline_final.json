@@ -1,0 +1,162 @@
+{
+  "components": {
+    "comp-add": {
+      "executorLabel": "exec-add",
+      "inputDefinitions": {
+        "parameters": {
+          "a": {
+            "parameterType": "NUMBER_DOUBLE"
+          },
+          "b": {
+            "parameterType": "NUMBER_DOUBLE"
+          }
+        }
+      },
+      "outputDefinitions": {
+        "parameters": {
+          "Output": {
+            "parameterType": "NUMBER_DOUBLE"
+          }
+        }
+      }
+    },
+    "comp-multiply": {
+      "executorLabel": "exec-multiply",
+      "inputDefinitions": {
+        "parameters": {
+          "x": {
+            "parameterType": "NUMBER_DOUBLE"
+          },
+          "y": {
+            "parameterType": "NUMBER_DOUBLE"
+          }
+        }
+      },
+      "outputDefinitions": {
+        "parameters": {
+          "Output": {
+            "parameterType": "NUMBER_DOUBLE"
+          }
+        }
+      }
+    }
+  },
+  "defaultPipelineRoot": "gs://my-vertex-ai-pipeline/pipeline_root1/",
+  "deploymentSpec": {
+    "executors": {
+      "exec-add": {
+        "container": {
+          "args": [
+            "--executor_input",
+            "{{$}}",
+            "--function_to_execute",
+            "add"
+          ],
+          "command": [
+            "sh",
+            "-c",
+            "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip || python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet --no-warn-script-location 'kfp==2.5.0' '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"$0\" \"$@\"\n",
+            "sh",
+            "-ec",
+            "program_path=$(mktemp -d)\n\nprintf \"%s\" \"$0\" > \"$program_path/ephemeral_component.py\"\n_KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         \"$program_path/ephemeral_component.py\"                         \"$@\"\n",
+            "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import *\n\ndef add(a: float, b: float) -> float:\n    print(f\"Adding {a} and {b}\")\n    result = a + b\n    print(f\"Result: {result}\")\n    return result\n\n"
+          ],
+          "image": "python:3.9"
+        }
+      },
+      "exec-multiply": {
+        "container": {
+          "args": [
+            "--executor_input",
+            "{{$}}",
+            "--function_to_execute",
+            "multiply"
+          ],
+          "command": [
+            "sh",
+            "-c",
+            "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip || python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet --no-warn-script-location 'kfp==2.5.0' '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"$0\" \"$@\"\n",
+            "sh",
+            "-ec",
+            "program_path=$(mktemp -d)\n\nprintf \"%s\" \"$0\" > \"$program_path/ephemeral_component.py\"\n_KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         \"$program_path/ephemeral_component.py\"                         \"$@\"\n",
+            "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import *\n\ndef multiply(x: float, y: float) -> float:  # \u2605 \uc218\uc815: \ubc18\ud658 \ud0c0\uc785 \ud78c\ud2b8 \ucd94\uac00\n    \"\"\"\ub450 \uc22b\uc790\ub97c \uacf1\ud558\uace0 \uacb0\uacfc\ub97c \ubc18\ud658\ud558\ub294 \ucef4\ud3ec\ub10c\ud2b8\"\"\"\n    print(f\"Multiplying {x} and {y}\")\n    result = x * y\n    print(f\"Result: {result}\")\n    return result  # \u2605 \uc218\uc815: return \uad6c\ubb38 \ucd94\uac00\n\n"
+          ],
+          "image": "python:3.9"
+        }
+      }
+    }
+  },
+  "pipelineInfo": {
+    "name": "my-full-pipeline-with-outputs"
+  },
+  "root": {
+    "dag": {
+      "tasks": {
+        "add": {
+          "cachingOptions": {
+            "enableCache": true
+          },
+          "componentRef": {
+            "name": "comp-add"
+          },
+          "inputs": {
+            "parameters": {
+              "a": {
+                "componentInputParameter": "a"
+              },
+              "b": {
+                "componentInputParameter": "b"
+              }
+            }
+          },
+          "taskInfo": {
+            "name": "add"
+          }
+        },
+        "multiply": {
+          "cachingOptions": {
+            "enableCache": true
+          },
+          "componentRef": {
+            "name": "comp-multiply"
+          },
+          "dependentTasks": [
+            "add"
+          ],
+          "inputs": {
+            "parameters": {
+              "x": {
+                "taskOutputParameter": {
+                  "outputParameterKey": "Output",
+                  "producerTask": "add"
+                }
+              },
+              "y": {
+                "componentInputParameter": "b"
+              }
+            }
+          },
+          "taskInfo": {
+            "name": "multiply"
+          }
+        }
+      }
+    },
+    "inputDefinitions": {
+      "parameters": {
+        "a": {
+          "defaultValue": 3.0,
+          "isOptional": true,
+          "parameterType": "NUMBER_DOUBLE"
+        },
+        "b": {
+          "defaultValue": 5.0,
+          "isOptional": true,
+          "parameterType": "NUMBER_DOUBLE"
+        }
+      }
+    }
+  },
+  "schemaVersion": "2.1.0",
+  "sdkVersion": "kfp-2.5.0"
+}

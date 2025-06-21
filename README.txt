@@ -17,11 +17,14 @@ python -m ipykernel install --user --name=ml_env --display-name "Python (ml_env)
 2) 
 
 
+
 3. 실습이 없는 Chapter(이론)
 Chapter08 - Explore Vertex AI Console
 
 
+
 Chapter10 - About Model Garden 
+
 
 
 Chapter11 - * Machine Learning Basic 
@@ -29,8 +32,10 @@ Chapter11 - * Machine Learning Basic
 1) 
 
 
+
 Chapter12 - GCP Service for Machine Learning 
 : Machine Learning에 사용되는 GCP 제품/서비스(Compute Engine, IAM, Cloud Storage)
+
 
 
 Chapter13 - * GCP Product for Machine Learning 
@@ -41,6 +46,7 @@ Chapter13 - * GCP Product for Machine Learning
 4) BigQuery ML  : 학습시킬 데이터도 있고 코딩도 할 수 있고 모델 학습을 위한 SQL 작성도 가능한 상황
 
 
+
 Chapter14 - ML APIs(Pre Built APIs)
 : Rest and RPC API 호출만으로 사용가능(* RPC API에 대해 알아보기)
 1) Vision API
@@ -48,6 +54,7 @@ Chapter14 - ML APIs(Pre Built APIs)
 3) Speech To Text API
 4) Translation API
 5) Video API
+
 
 
 Chapter15 - Google Vision API
@@ -98,6 +105,7 @@ gcloud ml vision detect-image-properties honda.webp
 gcloud ml vision detect-objects multiple_fruits2.jpg 
 
 
+
 Chapter16 - Google Natural Language API
 1) Try in browser
 2) *gcloud tool
@@ -123,11 +131,14 @@ gcloud ml language classify-text --content='Drone incidents near nuclear power p
 gcloud ml language classify-text --content='대한민국 제21대 대통령 선거는 대한민국의 제21대 대통령을 선출하는 대한민국의 대통령 선거이다. 선거 결과 더불어민주당의 이재명 후보가 국민의힘 김문수 후보와 개혁신당 이준석 후보를 누르고 대통령에 당선되었다' --language=ko 
 
 
+
 Chapter17 - Google Speech To Text, Text To Speech API
 1) Try in browser
 
 
+
 Chapter18 - Note Google AutoML
+
 
 
 Chapter19 - AutoML Vision(콘솔 쉘에서 진행)
@@ -143,10 +154,13 @@ git config --global http.postBuffer 524288000
 git config --global --unset http.postBuffer
 
 
+
 Chapter20 - AutoML Natural Language
 
 
+
 Chapter21 - AutoML with Tabular data
+
 
 
 Chapter22 - Custom Training
@@ -168,6 +182,7 @@ Dataset for Custom Training
 - 150 samples
 - https://www.kaggle.com/datasets/arshid/iris-flower-dataset
 - Training : custom container, pre-built container
+
 
 
 Chapter23 - Custom Training with Custom Container
@@ -253,6 +268,7 @@ curl \
 - 한 번에 예측할 양이 많은 경우
 
 
+
 Chapter24 - Custom Training with PreBuilt Container
 1) Dataset - Explore
 2) Setup Cloud Storage Bucket
@@ -283,3 +299,16 @@ gsutil cp dist/trainer-0.2.tar.gz gs://training_prebuilt_container/
 >>> 실행환경을 직접 구성해야하는 경우 = custom container
 prebuilt container는 머신러닝을 위해 필요한 기본적인 패키지(ex. pytorch or tensorflow 등)가 설치된 환경을 제공한다면 
 custom container는 직접 컨테이너 환경에 필요한 머신러닝 및 회사에서 자체 개발한 패키지를 설치하여 환경을 구성할 수 있음.
+
+
+
+Chapter25 - Vertex AI Pipeline + Batch Prediction
+1) User Managed Notebook Instance 생성 (기존에는 Managed Notebook 사용)
+2) Notebook에 KFP(KubeFlow Pipeline) 설치
+3) (Pipeline에서 사용될-각각의 태스크)Components 정의
+4) 
+
+* Vertex AI Pipeline Part 4 <<< 여기서 멈춘 상태(라이브러리 deprecated)
+ImageDatasetCreateOp
+1) Components 및 Pipeline(함수) 구성
+2) Complie 
